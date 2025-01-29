@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>ShopMate</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="javascript:void(0)" id="cart-btn">Cart (0)</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products...">
+      <button type="submit">Search</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore the Latest Trends</h1>
+      <!-- <img src="C:\Users\abhic\OneDrive\Documents\Projects\E-Commerce Website\img.png" alt="img"></img> -->
+      <p>Your perfect style is just a click away.</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-products" id="shop">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="shirt.png" alt="Shirt">
+        <h3>Shirt</h3>
+        <p>Rs 680</p>
+        <button class="btn" onclick="addToCart('Shirt', 680)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="Hoodie.png" alt="Hoodie">
+        <h3>Hoodie</h3>
+        <p>Rs 568</p>
+        <button class="btn" onclick="addToCart('Hoodie', 568)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="Shirt1.png" alt="Half-Sleeve Shirt">
+        <h3>Half-Sleeve Shirt</h3>
+        <p>Rs 620</p>
+        <button class="btn" onclick="addToCart('Half-Sleeve Shirt', 620)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 ShopMate. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total-price">0.00</span></p>
+      <button onclick="checkout()">Checkout</button>
+      <button onclick="closeCart()">Close</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
